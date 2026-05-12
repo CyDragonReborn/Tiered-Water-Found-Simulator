@@ -1,22 +1,16 @@
-plugins {
-    id 'com.android.application'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.0'
+    }
 }
 
-android {
-    namespace 'com.fountainsim'
-    compileSdk 34
-
-    defaultConfig {
-        applicationId 'com.fountainsim'
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName '1.0'
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
     }
 }
